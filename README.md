@@ -1,7 +1,10 @@
 # Findog Legacy Adapter
 
+> [!IMPORTANT]
+> This repository is a legacy compatibility component of [Oblidog](https://github.com/oblidog). New product development happens in [oblidog-ledger](https://github.com/oblidog/oblidog-ledger). This adapter is retained only for importing the original Findog workbook during migration.
+
 A library for reading a legacy Findog workbook and passing its data to another
-application, such as a FastAPI seeder. It does not write to the workbook or
+application, such as Oblidog Ledger. It does not write to the workbook or
 perform reverse synchronization.
 
 ## Install from GitHub
@@ -12,9 +15,12 @@ tag:
 ```toml
 # pyproject.toml
 dependencies = [
-  "findog-legacy-adapter @ git+https://github.com/findog-app/findog-legacy-core.git@v0.7.2",
+  "findog-legacy-adapter @ git+https://github.com/oblidog/findog-legacy-core.git@v0.7.2",
 ]
 ```
+
+The package and import names intentionally retain `findog` because they identify
+the legacy compatibility boundary.
 
 ## Use in a seeder
 
